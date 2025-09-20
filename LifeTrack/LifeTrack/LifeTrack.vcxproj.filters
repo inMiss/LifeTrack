@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Language">
+      <UniqueIdentifier>{a6a4e4f0-5779-4328-8a43-e22af60e1fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utilities">
+      <UniqueIdentifier>{9244fe30-4067-4633-9ff0-226fca4cd54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{137db749-2ae4-4838-b067-19ba4c875574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Management">
+      <UniqueIdentifier>{404681df-83bb-43b5-b181-6435cf4a33da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel">
+      <UniqueIdentifier>{826e8bbc-cd1e-4ab8-ba67-3f97279c727d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="LifeTrack.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="LifeTrack.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="LifeTrack.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="LifeTrack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities\dbmana.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="language\language.cpp">
+      <Filter>Language</Filter>
+    </ClCompile>
+    <ClCompile Include="common\global.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\commonFunc.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="management\dataCenter.cpp">
+      <Filter>Management</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\analysisPanel.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\mainPanel.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\nearlyTaskPanel.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\taskHistoryPanel.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\systemPanel.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\baseTable.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\addTaskDialog.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\textInputPage.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\textShowPage.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\todayTaskPage.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\customWidget.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utilities\blockingconcurrentqueue.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities\concurrentqueue.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities\Singleton.h">
+      <Filter>utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="language\language.h">
+      <Filter>Language</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\global.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\commonFunc.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="management\dataCenter.h">
+      <Filter>Management</Filter>
+    </ClInclude>
+    <ClInclude Include="management\structCommon.h">
+      <Filter>Management</Filter>
+    </ClInclude>
+    <ClInclude Include="panel\baseTable.h">
+      <Filter>panel</Filter>
+    </ClInclude>
+    <ClInclude Include="panel\customWidget.h">
+      <Filter>panel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="utilities\dbmana.h">
+      <Filter>utilities</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\analysisPanel.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\mainPanel.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\nearlyTaskPanel.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\taskHistoryPanel.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\systemPanel.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\addTaskDialog.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\textInputPage.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\textShowPage.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\todayTaskPage.h">
+      <Filter>panel</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

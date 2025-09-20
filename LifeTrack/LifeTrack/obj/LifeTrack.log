@@ -1,0 +1,153 @@
+﻿   Qt/MSBuild: 3.3.1.1
+   Qt: 5.14.2
+  commonFunc.cpp
+  global.cpp
+  language.cpp
+  dataCenter.cpp
+  addTaskDialog.cpp
+  analysisPanel.cpp
+  baseTable.cpp
+  customWidget.cpp
+  mainPanel.cpp
+  nearlyTaskPanel.cpp
+  systemPanel.cpp
+  taskHistoryPanel.cpp
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 common\commonFunc.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 management\dataCenter.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 panel\baseTable.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 panel\mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 panel\mainPanel.cpp)
+  textInputPage.cpp
+  textShowPage.cpp
+  todayTaskPage.cpp
+  dbmana.cpp
+  LifeTrack.cpp
+  main.cpp
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 panel\systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 panel\addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 panel\todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 LifeTrack.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\main.cpp(15,1): warning C4005: “SPDLOG_ACTIVE_LEVEL”: 宏重定义
+D:\Program\LifeTrack\LifeTrack\LifeTrack\spdlog\common.h(240,1): message : 参见“SPDLOG_ACTIVE_LEVEL”的前一个定义 (编译源文件 main.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\main.cpp(39,37): warning C4101: “ex”: 未引用的局部变量
+  qrc_LifeTrack.cpp
+  moc_LifeTrack.cpp
+  moc_analysisPanel.cpp
+  moc_mainPanel.cpp
+  moc_nearlyTaskPanel.cpp
+  moc_taskHistoryPanel.cpp
+  moc_systemPanel.cpp
+  moc_addTaskDialog.cpp
+  moc_textInputPage.cpp
+  moc_textShowPage.cpp
+  moc_todayTaskPage.cpp
+  moc_dbmana.cpp
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 obj\qt\moc\moc_mainPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 obj\qt\moc\moc_todayTaskPage.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(35,2): warning C4091: “typedef ”: 没有声明变量时忽略“SBelongTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“SImportLevelDictionary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(82,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewardsTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(104,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRepeatTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(130,2): warning C4091: “typedef ”: 没有声明变量时忽略“SStatusTypeDictionary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(157,2): warning C4091: “typedef ”: 没有声明变量时忽略“SDailySummary”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(194,2): warning C4091: “typedef ”: 没有声明变量时忽略“SRewards”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(277,2): warning C4091: “typedef ”: 没有声明变量时忽略“STaskList”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 obj\qt\moc\moc_addTaskDialog.cpp)
+D:\Program\LifeTrack\LifeTrack\LifeTrack\management\structCommon.h(296,2): warning C4091: “typedef ”: 没有声明变量时忽略“SIncentiveContent”的左侧 (编译源文件 obj\qt\moc\moc_systemPanel.cpp)
+  LifeTrack.vcxproj -> D:\Program\LifeTrack\LifeTrack\x64\Debug\LifeTrack.exe
