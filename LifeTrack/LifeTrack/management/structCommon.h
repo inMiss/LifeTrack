@@ -4,10 +4,12 @@
 #include <QString>
 #include <QDateTime>
 #include <QSharedDataPointer>
-#include "../common/commonFunc.h"
+#include <QSharedPointer>
 
 #define DATETIME_EMPTY QDateTime(QDate(1000, 1, 1), QTime(1, 1, 1))
 #define DATETIME_MAX QDateTime(QDate(9999, 1, 1), QTime(1, 1, 1))
+#define DATE_EMPTY QDate(QDate(1000, 1, 1))
+#define DATE_MAX QDate(QDate(9999, 1, 1))
 #define DATETIME_EMPTY_SHOW "---"
 //类型等不会影响具体的业务逻辑，只会影响一些显示或者任务设定，因此可以进行外部添加
 //任务所属类型，如英语学习、健身等
@@ -41,7 +43,7 @@ typedef struct SBelongTypeDictionary {
 //#define IMPORT_LEVEL_THIRD "import_level_third"//3
 //#define IMPORT_LEVEL_FOUTH "import_level_fouth"//4
 //import_levle_dictionary [重要程度表格]
-typedef struct SImportLevelDictionary {
+    struct SImportLevelDictionary {
     SImportLevelDictionary() {};
     SImportLevelDictionary(QString level_id, QString shouw_text,int default_value)
     {
@@ -104,13 +106,17 @@ typedef struct SRepeatTypeDictionary {
 };
 
 //状态
- #define TASK_STATUS_BEGIN       "task_status_begin"//开始
- #define TASK_STATUS_INPROGRESS  "task_status_inProgress"//进行中
- #define TASK_STATUS_STOP        "task_status_stop"//中断
- #define TASK_STATUS_RESTART     "task_status_restart"//重新开始
- #define TASK_STATUS_FILED       "task_status_filed"//失败
- #define TASK_STATUS_FINISH      "task_status_finish"          //完成
- #define TASK_STATUS_UNDETERMINED "task_status_undetermined" //未确认
+#define TASK_STATUS_UNSTART "task_status_unstart" //未开始 
+#define TASK_STATUS_PAUSE       "task_status_pause"//暂停
+#define TASK_STATUS_AUTOPAUSE       "task_status_autoPause"//自动暂停-设定的拖延期限内未开始进行任务，会自动暂停
+
+#define TASK_STATUS_INPROGRESS  "task_status_inProgress"//进行中
+#define TASK_STATUS_RESTART     "task_status_restart"//重新进行   
+
+#define TASK_STATUS_FILED       "task_status_filed"//失败
+#define TASK_STATUS_FINISH      "task_status_finish"  //完成
+
+#define TASK_STATUS_SLEEP     "task_status_sleep"  //休眠中--目前专属于记忆曲线的，表明在间隔内的等待状态
 
 typedef struct SStatusTypeDictionary {
     SStatusTypeDictionary() {};
@@ -126,7 +132,7 @@ typedef struct SStatusTypeDictionary {
     }
 
     QString     task_status;        //所属种类id
-    QString     show_content;     //所属种类显示说明
+    QString     show_content;       //所属种类显示说明
 };
 ///////////////////////////////////////////
 //daily_summary [每日总结表格]
@@ -188,58 +194,87 @@ typedef struct SRewards {
     QString   end_time;       //结束时间
     QString     goal_type;      //奖励类型：分值累计，指定任务
     QString     content;        //奖励内容
-    double      value;          //分值类型，的达标分值
+    double      value;          //分值类型：的达标分值
     QString     status;         //当前奖励状态--完成、失败等
     QString     remark;         //备注
 };
 
 //task_list [任务属性]
+//包含活跃任务表格和完成任务表格，但是参数和结构相同
+//active_task 和 completed_task
 typedef struct STaskList {
     STaskList() 
     {
         this->id = "";
         this->name = "";
+
+        this->start_date = DATETIME_EMPTY_SHOW;
+        this->deadline = DATETIME_EMPTY_SHOW;
+
+        this->create_time = DATETIME_EMPTY_SHOW;
         this->start_time = DATETIME_EMPTY_SHOW;
-        this->end_time = DATETIME_EMPTY_SHOW;
+        this->finish_time = DATETIME_EMPTY_SHOW;
         this->during_time = 0;
-        this->create_time = this->start_time;
+
         this->import_level = "import_level_first";
         this->value = 0;
+        this->sum_points = 0;
+
+        this->belong_type = "belong_id_fintness";
+
         this->repeat_type = "repeat_type_once";
         this->finish_times = 0;
-        this->sum_points = 0;
-        this->belong_type = "belong_id_fintness";
+        this->fail_times = 0;
+        
         this->is_deduction = false;
         this->is_countdown = false;
         this->is_can_pause = false;
-        this->task_status = "task_status_undetermined";
-        this->finish_time = DATETIME_EMPTY_SHOW;
-        this->pause_time = DATETIME_EMPTY_SHOW;
+        this->fail_threshold = 3;
+
+        this->task_status = "task_status_unstart";
+        this->statue_resaon = "";
+
         this->parent_task = "";
         this->remark = "";
+ 
     };
-    STaskList(QString id, QString name, QString start_time, QString end_time, double during_time, QString create_time, QString import_level, int value, QString repeat_type,
-        int finish_times, double sum_points, QString belong_type, bool is_deduction, bool is_countdown, bool is_can_pause, QString task_status, QString finish_time
-        , QString pause_strat_time, QString parent_task, QString remark)
+    STaskList(QString id, QString name, QString start_date, QString deadline, QString create_time, QString start_time, QString finish_time, double during_time,
+        QString import_level, int value, double sum_points, QString repeat_type, int finish_times, int fail_times, QString belong_type, bool is_deduction,
+        bool is_countdown, bool is_can_pause, int fail_threshold, QString task_status, QString statue_resaon, QString parent_task, QString remark)
     {
         this->id = id;
         this->name = name;
-        this->start_time = start_time;
-        this->end_time = end_time;
-        this->during_time = during_time;
+
+        this->start_date = start_date;
+        this->deadline = deadline;
+
         this->create_time = create_time;
+        this->start_time = start_time;
+
+        this->finish_time = finish_time;
+        this->during_time = during_time;
+
         this->import_level = import_level;
         this->value = value;
+        this->sum_points = sum_points;
+
         this->repeat_type = repeat_type;
         this->finish_times = finish_times;
-        this->sum_points = sum_points;
+        this->fail_times = fail_times;
+
         this->belong_type = belong_type;
+
         this->is_deduction = is_deduction;
         this->is_countdown = is_countdown;
         this->is_can_pause = is_can_pause;
+        this->fail_threshold = fail_threshold;
+
+        this->remark = remark;
+        this->fail_threshold = fail_threshold;
+
         this->task_status = task_status;
-        this->finish_time = finish_time;
-        this->pause_time = pause_strat_time;
+        this->statue_resaon = statue_resaon;
+
         this->parent_task = parent_task;
         this->remark = remark;
     };
@@ -247,33 +282,54 @@ typedef struct STaskList {
     {
         this->id.clear();
         this->name.clear();
+        this->start_date.clear();
+        this->deadline.clear();
+
+        this->create_time.clear();
+        this->start_time.clear();
+        this->finish_time.clear();
         this->import_level.clear();
+
         this->repeat_type.clear();
         this->belong_type.clear();
         this->task_status.clear();
+        this->statue_resaon.clear();
+
         this->parent_task.clear();
         this->remark.clear();
     }
-    QString     id;      //任务id
-    QString     name;        //任务内容，名称
-    QString   start_time;         //开始时间
-    QString   end_time;
+    QString     id;             //任务id
+    QString     name;           //任务内容，名称
+
+    QString     start_date;        //开始日期--这个任务在创建时候，是否设定了开始日期，有些日期可以设定，比如下周我要做啥，比如一次的任务是有开始时间的
+    QString     deadline;         //截止日期
+    
+    QString     create_time;    //这个任务创建时的时间   
+    QString     start_time;       //这个任务的开始时间
+    
+    QString     finish_time;    //任务完成时间 最近的完成时间-精确到分秒
     double      during_time;         //持续时间(结束时间,单位:s)
-    QString   create_time;
+
     QString     import_level;         //重要性层级
-    int         value;             //这个任务所设定的分值
+    int         value;                //这个任务所设定的分值
+    double      sum_points;          //这个任务累计分数，如果有子任务，也需要累加
+
     QString     repeat_type;         //重复类型、每日、重复等
-    int         finish_times;             //完成次数，默认为0，如每日，则持续累加
-    double      sum_points;             //这个任务累计分数，如果有子任务，也需要累加
+    int         finish_times;        //完成次数，默认为0，如每日，则持续累加
+    int         fail_times;         //失败次数
+
     QString     belong_type;         //所属类型，英语、锻炼等
+
     bool        is_deduction;//是否进行分值的减去，任务失败扣除累计分值
     bool        is_countdown;//是否进行倒计时提醒，
     bool        is_can_pause;//是否能够进行暂停，如果false，则断掉后，直接判断为失败
-    QString     task_status;         //任务状态，开始、结束、暂停
-    QString   finish_time;          //任务完成时间
-    QString   pause_time;             //暂停开始时间
-    QString     parent_task;         //父任务id
-    QString     remark;         //备注
+    int         fail_threshold;//拖延阈值，一个任务如果连续拖延天数，就视为自动暂停，或者失败
+
+    QString     task_status;    //任务状态，开始、结束、暂停
+    QString     statue_resaon;//由于自动暂停、失败等原因记录，记录最新的原因
+
+    QString     parent_task;    //父任务id
+    QString     remark;         //备注--用户添加的任务详情备注
 };
 
 using STaskListPtr = QSharedPointer<STaskList>;
@@ -294,4 +350,76 @@ typedef struct SIncentiveContent {
     QString     number;         //当前奖励状态--完成、失败等
     QString     content;         //备注
 };
+
+#define TASK_ACTIVETYPE_NO_ACTIVE "task_activeType_no_active" //刚创建状态
+#define TASK_ACTIVETYPE_ACTIVE "task_activeType_active" //只要一开始，包括进行、暂停、重启
+#define TASK_ACTIVETYPE_FINISHED "task_activeType_finished"//任务完成:这个主要用来在任务详情界面显示是查询任务的基础信息，所以完成状态包括成功和失败，都在完成表格中
+
+//daily_history [历史任务记录表格]
+//目前每天会在已有的活跃任务创建每日的任务，不会创建未来的任务，
+//但是每个任务当天的状态会被存储下来，作为当天的历史存储
+//主要记录活跃任务的每日任务记录
+struct SDailyHistory {
+    SDailyHistory() { };
+    SDailyHistory(QString task_id, QString task_activeType, QString task_date, QString task_status, QString finish_time, QString remark)
+    {
+        this->task_id = task_id;
+        this->task_activeType = task_activeType;
+        this->task_status = task_status;
+        this->task_date = task_date;
+        this->finish_time = finish_time;
+        this->remark = remark;
+    };
+    ~SDailyHistory()
+    {
+        this->task_id.clear();
+        this->task_activeType.clear();
+        this->task_status.clear();
+        this->task_date.clear();
+        this->finish_time.clear();
+        this->remark.clear();
+    }
+    QString     task_id;             //对应的任务id
+    QString     task_activeType;    //任务活跃状态
+    QString     task_date;        //创建时间:历史记录实际上是创建的任务，每日所生成的新任务，然后一天结束后，会写到历史数据，所以不需要存太多，需要存储这个任务的创建时间
+    QString     task_status;    //任务状态，完成、失败
+    QString     finish_time;    //这个任务如果是完成的，显示完成时间
+    QString     remark;         //备注--成功还是失败的原因，失败可能是超时或者手动输入的
+};
+
+//status_change [任务状态变更记录，一个任务状态变化，比如开始、暂停、重新开始、失败、完成、重新开始的节点记录]
+struct SStatusChange {
+    SStatusChange(){ };
+    SStatusChange(QString task_id, QString task_activeType, QString task_status, QString change_time, QString reason)
+    {
+        this->task_id = task_id;
+        this->task_activeType = task_activeType;
+        this->task_status = task_status;
+        this->change_time = change_time;
+        this->reason = reason;
+    };
+    ~SStatusChange()
+    {
+        this->task_id.clear();
+        this->task_activeType.clear();
+        this->task_status.clear();
+        this->change_time.clear();
+        this->reason.clear();
+    }
+    QString     task_id;             //对应的任务id
+    QString     task_activeType;    //任务活跃状态
+    QString     task_status;    //开始/暂停/恢复/自动暂停/成功/放弃 任务状态记录
+    QString     change_time;    //这个任务如果是完成的，显示完成时间
+    QString     reason;         //变更原因
+};
+
+//表格中显示的按钮操作，当然也涉及到任务变更
+#define TASK_OPERATE_TYPE_START "start"
+#define TASK_OPERATE_TYPE_RESTART "reStart"
+#define TASK_OPERATE_TYPE_PAUSE "pause"
+#define TASK_OPERATE_TYPE_FAILE "faile"
+#define TASK_OPERATE_TYPE_FILISH "finish"
+#define TASK_OPERATE_TYPE_EDIT "edit"
+#define TASK_OPERATE_TYPE_DELETE "delete"
+
 #endif

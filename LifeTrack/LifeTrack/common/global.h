@@ -11,6 +11,8 @@ extern QString g_IniConfigDirPath;
 extern QString g_chineseLanguageFilePath;
 extern QString g_englishLanguageFilePath;
 
+//UI资源路径
+extern QString g_uiResourceEngilshPath;
 //全局函数
 extern void gobalInit();
 

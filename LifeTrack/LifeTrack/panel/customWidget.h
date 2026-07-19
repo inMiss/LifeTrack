@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QWidget>
+#include "../common/customMessage.h"
 
 class CCustomWidget : public QWidget
 {
@@ -9,4 +10,5 @@ public:
     ~CCustomWidget();
 
     virtual void updateLanguageShowText();
+
 };

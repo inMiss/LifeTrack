@@ -12,6 +12,9 @@ QString g_IniConfigDirPath = "";
 QString g_chineseLanguageFilePath = "";
 QString g_englishLanguageFilePath = "";
 
+//UI资源路径
+QString g_uiResourceEngilshPath = "";
+
 void gobalInit()
 {
     g_applicationDirPath = qApp->applicationDirPath() + "/";
@@ -28,4 +31,7 @@ void gobalInit()
     //各语言相关文件
     g_chineseLanguageFilePath = g_applicationDirPath + "language/chinese.ini";
     g_englishLanguageFilePath = g_applicationDirPath + "language/english.ini";
+
+    //UI资源路径
+    g_uiResourceEngilshPath = "";
 }

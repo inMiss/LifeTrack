@@ -55,6 +55,7 @@ namespace language
         delete m_pLanguageSetting;
         m_pLanguageSetting = nullptr;
         m_pLanguageSetting = new QSettings(languagePath, QSettings::IniFormat);
+        m_pLanguageSetting->setIniCodec("UTF-8");
     }
 
 }

@@ -1,6 +1,8 @@
 #include "commonFunc.h"
 #include "../language/language.h"
-#include "../management/structCommon.h"
+
+#include <QDate>
+#include <QDateTime>
 //////////////////////////////////////////////////////////////////////////
 // 
 // ///////////////////////////////////////////////////////////////////////
@@ -38,6 +40,16 @@ QDate textToDate(const QString& dateTimeText)
     return time.date();
 }
 
+QString dateToShowText(const QDate& date)
+{
+    if (date == DATE_EMPTY || date == DATE_MAX)
+    {
+        return "---";
+    }
+    return date.toString("yyyy-MM-dd");
+}
+
+
 double get2DateTimeTextDiff(const QString& beginTime, const QString& endTime)
 {
     if (beginTime.isEmpty() || endTime.isEmpty())
@@ -52,10 +64,11 @@ double get2DateTimeTextDiff(const QString& beginTime, const QString& endTime)
 QString getNewTaskId(const QString& parentId , const int index)
 {
    QString currentId =  QString::number(QDateTime::currentDateTime().toSecsSinceEpoch());
-   if (parentId.isEmpty())
+   if (parentId.isEmpty() || parentId == "")
    {
        return currentId + "-" + QString::number(index);
    }
 
    return parentId + "-" + currentId + "-" + QString::number(index);
 }
+

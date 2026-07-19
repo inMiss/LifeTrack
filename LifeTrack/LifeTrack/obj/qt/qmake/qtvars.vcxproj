@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Program\LifeTrack\LifeTrack\LifeTrack\obj\qt\qmake;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtSql;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtWidgets;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtGui;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtANGLE;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtCore;D:\Program\LifeTrack\LifeTrack\LifeTrack\obj\qt\qmake;/include;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>H:\GitHubStorage\LifeTrack\LifeTrack\LifeTrack\obj\qt\qmake;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtSql;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtWidgets;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtGui;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtANGLE;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\include\QtCore;H:\GitHubStorage\LifeTrack\LifeTrack\LifeTrack\obj\qt\qmake;/include;D:\Program\GitTool\QT-5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>.\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>

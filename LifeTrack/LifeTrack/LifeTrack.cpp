@@ -2,20 +2,12 @@
 
 #include <QHBoxLayout>
 
-#include "panel/mainPanel.h"
-#include "panel/nearlyTaskPanel.h"
-#include "panel/taskHistoryPanel.h"
-#include "panel/analysisPanel.h"
-#include "panel/systemPanel.h"
-
-#include "../common/common.h"
-#include "../language/language.h"
+#include "common/common.h"
+#include "language/language.h"
 
 enum ETabID
 {
     PTAB_MAINPAGE_ID = 0,
-    PTAB_TSAKPAGE_ID,
-    PTAB_GOALPAGE_ID,
     PTAB_ANALYSISPAGE_ID,
     PTAB_SYSTEMPAGE_ID
 };
@@ -23,6 +15,9 @@ enum ETabID
 LifeTrack::LifeTrack(QWidget *parent)
     : QWidget(parent)
     , m_pPageManager(nullptr)
+    , m_pMainPage(nullptr)
+    , m_pAnalysisPage(nullptr)
+    , m_pSystemPage(nullptr)
 {
    // ui.setupUi(this);
     createUi();
@@ -42,24 +37,18 @@ void LifeTrack::createUi()
     m_pPageManager->setTabShape(QTabWidget::Triangular);
 
     //主页
-    CMainPanel* pMainPage = new CMainPanel(m_pPageManager);
-    m_pPageManager->insertTab(PTAB_MAINPAGE_ID, pMainPage, "Main");
+    m_pMainPage = new CMainPanel(m_pPageManager);
+    m_pPageManager->insertTab(PTAB_MAINPAGE_ID, m_pMainPage, "Main");
 
-    //近期任务
-    CNearlyTaskPanel* pTaskPage = new CNearlyTaskPanel(m_pPageManager);
-    m_pPageManager->insertTab(PTAB_TSAKPAGE_ID, pTaskPage, "Nearly Tasks");
+    //总结分析--对上面的数据进行分析
+    m_pAnalysisPage = new CAnalysisPanel(m_pPageManager);
+    m_pPageManager->insertTab(PTAB_ANALYSISPAGE_ID, m_pAnalysisPage, "Analysis");
+    connect(m_pAnalysisPage, &CAnalysisPanel::sigTaskOperation, this, &LifeTrack::slotTaskOperation);
 
-    //所有历史任务
-    CTaskHistoryPanel* pGoalPage = new CTaskHistoryPanel(m_pPageManager);
-    m_pPageManager->insertTab(PTAB_GOALPAGE_ID, pGoalPage, "History Tasks");
-
-    //总结分析
-    CAnalysisPanel* pAnalysisPage = new CAnalysisPanel(m_pPageManager);
-    m_pPageManager->insertTab(PTAB_ANALYSISPAGE_ID, pAnalysisPage, "Analysis");
-
-    //系统设置
-    CSystemPanel* pSystemPage = new CSystemPanel(m_pPageManager);
-    m_pPageManager->insertTab(PTAB_SYSTEMPAGE_ID, pSystemPage, "System");
+    connect(m_pMainPage, &CMainPanel::sigUpdateCompleteTaskTable, m_pAnalysisPage, &CAnalysisPanel::slotUpdateTable);
+    //系统设置--设置一些选择
+    m_pSystemPage = new CSystemPanel(m_pPageManager);
+    m_pPageManager->insertTab(PTAB_SYSTEMPAGE_ID, m_pSystemPage, "System");
 
     pMainLayout->addWidget(m_pPageManager);
 }
@@ -69,9 +58,16 @@ void LifeTrack::updateLanguageShowText()
     if (m_pPageManager)
     {
         m_pPageManager->setTabText(PTAB_MAINPAGE_ID, language::CLanguageLoad::GetInstance()->getShowText("mainPage"));
-        m_pPageManager->setTabText(PTAB_TSAKPAGE_ID, language::CLanguageLoad::GetInstance()->getShowText("taskPage"));
-        m_pPageManager->setTabText(PTAB_GOALPAGE_ID, language::CLanguageLoad::GetInstance()->getShowText("goalPage"));
         m_pPageManager->setTabText(PTAB_ANALYSISPAGE_ID, language::CLanguageLoad::GetInstance()->getShowText("analysisPage"));
         m_pPageManager->setTabText(PTAB_SYSTEMPAGE_ID, language::CLanguageLoad::GetInstance()->getShowText("systemPage"));
     }
 }
+
+void LifeTrack::slotTaskOperation(const QString& task_id, const int nRow, const QString& taskActiveType, const QString& taskOperType)
+{
+    if (m_pMainPage)
+    {
+        m_pMainPage->slotTaskOperation_outerUse(task_id, nRow, taskActiveType, taskOperType);
+    }
+}
+

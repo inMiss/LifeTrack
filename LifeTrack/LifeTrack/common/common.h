@@ -16,5 +16,11 @@ enum EPageID
     PID_SYSTEMPAGE_ID = 500
 };
 
-
+enum ETaskFilterType
+{
+    e_taskFilter_type_today = 0,
+    e_taskFilter_type_nearWeek,
+    e_taskFilter_type_nearMonth,
+    e_taskFilter_type_all,
+};
 #endif

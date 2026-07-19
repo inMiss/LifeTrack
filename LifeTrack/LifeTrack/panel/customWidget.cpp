@@ -3,7 +3,6 @@
 CCustomWidget::CCustomWidget(QWidget *parent)
     : QWidget(parent)
 {
-    
 }
 
 CCustomWidget::~CCustomWidget()

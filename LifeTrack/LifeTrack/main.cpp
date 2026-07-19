@@ -2,6 +2,8 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QDir>
+#include <QMetaType>
+#include <QFile>
 
 #include "common/global.h"
 
@@ -11,15 +13,16 @@
 #include "spdlog/sinks/daily_file_sink.h"
 
 #include "management/dataCenter.h"
+#include "panel/table/baseTable.h"
 
-#define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
+//#define SPDLOG_ACTIVE_LEVEL SPDLOG_LOGGER_DEBUG
 
 void initSpdlog()
 {
     try
     {
 
-        QString path = qApp->applicationDirPath() + "/log";
+        QString path = qApp->applicationDirPath() + "/spdlog";
         QDir dir(path);
         if (!dir.exists())
             bool ok = dir.mkpath(path); //只创建一级子目录，即必须保证上级目录存在
@@ -28,7 +31,6 @@ void initSpdlog()
         path += "/log.txt";
 
         spdlog::rotating_logger_mt("logger", path.toStdString(), 1024 * 1024 * 50, 10);
-
         spdlog::set_pattern("[%Y-%m-%d %H:%M:%S.%e][thread %t][%@,%!][%l] : %v");
         spdlog::get("logger")->flush_on(spdlog::level::debug);
         spdlog::get("logger")->set_level(spdlog::level::debug);
@@ -42,12 +44,24 @@ void initSpdlog()
     }
 }
 
+inline void registerMetaTypes()
+{
+    // 注册ButtonData类型
+    qRegisterMetaType<ButtonData>("ButtonData");
+    qRegisterMetaType<QList<ButtonData>>("QList<ButtonData>");
+
+    // 如果还有其他自定义类型，可以在这里继续添加
+    // qRegisterMetaType<OtherType>("OtherType");
+    // qRegisterMetaType<QList<OtherType>>("QList<OtherType>");
+}
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     //
     gobalInit();
     initSpdlog();
+    registerMetaTypes();
     CDataCenter::GetInstance()->initInfo();
 
     LifeTrack w;

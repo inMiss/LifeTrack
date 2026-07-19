@@ -36,6 +36,21 @@
     <Filter Include="panel">
       <UniqueIdentifier>{826e8bbc-cd1e-4ab8-ba67-3f97279c727d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="panel\analysePanel">
+      <UniqueIdentifier>{e02824bb-57f9-448f-ab5f-ec3252356375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel\mainPanel">
+      <UniqueIdentifier>{d4c661b1-3182-4f20-a1bc-4cc25c57a121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel\systemSettingPanel">
+      <UniqueIdentifier>{53a07cde-e2d5-4b44-bfe6-52dc5b61cb5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel\table">
+      <UniqueIdentifier>{8bf25bd9-2e88-45b6-af23-3e957699f6c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="panel\taskDialog">
+      <UniqueIdentifier>{8de89b84-ba40-4a7b-8586-cb60eae417ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="LifeTrack.qrc">
@@ -70,38 +85,38 @@
     <ClCompile Include="management\dataCenter.cpp">
       <Filter>Management</Filter>
     </ClCompile>
-    <ClCompile Include="panel\analysisPanel.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\mainPanel.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\nearlyTaskPanel.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\taskHistoryPanel.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\systemPanel.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\baseTable.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\addTaskDialog.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\textInputPage.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\textShowPage.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
-    <ClCompile Include="panel\todayTaskPage.cpp">
-      <Filter>panel</Filter>
-    </ClCompile>
     <ClCompile Include="panel\customWidget.cpp">
       <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\analysePanel\analysisPanel.cpp">
+      <Filter>panel\analysePanel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\mainPanel\mainPanel.cpp">
+      <Filter>panel\mainPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\systemSettingPanel\systemPanel.cpp">
+      <Filter>panel\systemSettingPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\table\baseTable.cpp">
+      <Filter>panel\table</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\taskDialog\addTaskDialog.cpp">
+      <Filter>panel\taskDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\mainPanel\activeTaskPage.cpp">
+      <Filter>panel\mainPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\mainPanel\unActiveTaskPage.cpp">
+      <Filter>panel\mainPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="common\customMessage.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\MessageBox.cpp">
+      <Filter>panel</Filter>
+    </ClCompile>
+    <ClCompile Include="panel\taskDialog\inputReason.cpp">
+      <Filter>panel\taskDialog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -132,43 +147,43 @@
     <ClInclude Include="management\structCommon.h">
       <Filter>Management</Filter>
     </ClInclude>
-    <ClInclude Include="panel\baseTable.h">
-      <Filter>panel</Filter>
-    </ClInclude>
     <ClInclude Include="panel\customWidget.h">
       <Filter>panel</Filter>
+    </ClInclude>
+    <ClInclude Include="common\customMessage.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="utilities\dbmana.h">
       <Filter>utilities</Filter>
     </QtMoc>
-    <QtMoc Include="panel\analysisPanel.h">
+    <QtMoc Include="panel\mainPanel\activeTaskPage.h">
+      <Filter>panel\mainPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\mainPanel\unActiveTaskPage.h">
+      <Filter>panel\mainPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\systemSettingPanel\systemPanel.h">
+      <Filter>panel\systemSettingPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\mainPanel\mainPanel.h">
+      <Filter>panel\mainPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\taskDialog\addTaskDialog.h">
+      <Filter>panel\taskDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\analysePanel\analysisPanel.h">
+      <Filter>panel\analysePanel</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\table\baseTable.h">
+      <Filter>panel\table</Filter>
+    </QtMoc>
+    <QtMoc Include="panel\MessageBox.h">
       <Filter>panel</Filter>
     </QtMoc>
-    <QtMoc Include="panel\mainPanel.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\nearlyTaskPanel.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\taskHistoryPanel.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\systemPanel.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\addTaskDialog.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\textInputPage.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\textShowPage.h">
-      <Filter>panel</Filter>
-    </QtMoc>
-    <QtMoc Include="panel\todayTaskPage.h">
-      <Filter>panel</Filter>
+    <QtMoc Include="panel\taskDialog\inputReason.h">
+      <Filter>panel\taskDialog</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>
