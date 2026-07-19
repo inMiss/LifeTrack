@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'inputReason.h'
+** Meta object code from reading C++ file 'MessageBox.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.14.2)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../panel/taskDialog/inputReason.h"
+#include "../../panel/MessageBox.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'inputReason.h' doesn't include <QObject>."
+#error "The header file 'MessageBox.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.14.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,25 +21,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_CInputReason_t {
+struct qt_meta_stringdata_CMessageBox_t {
     QByteArrayData data[1];
-    char stringdata0[13];
+    char stringdata0[12];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_CInputReason_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CMessageBox_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_CInputReason_t qt_meta_stringdata_CInputReason = {
+static const qt_meta_stringdata_CMessageBox_t qt_meta_stringdata_CMessageBox = {
     {
-QT_MOC_LITERAL(0, 0, 12) // "CInputReason"
+QT_MOC_LITERAL(0, 0, 11) // "CMessageBox"
 
     },
-    "CInputReason"
+    "CMessageBox"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_CInputReason[] = {
+static const uint qt_meta_data_CMessageBox[] = {
 
  // content:
        8,       // revision
@@ -55,7 +55,7 @@ static const uint qt_meta_data_CInputReason[] = {
        0        // eod
 };
 
-void CInputReason::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CMessageBox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -63,30 +63,30 @@ void CInputReason::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject CInputReason::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CMessageBox::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_CInputReason.data,
-    qt_meta_data_CInputReason,
+    qt_meta_stringdata_CMessageBox.data,
+    qt_meta_data_CMessageBox,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *CInputReason::metaObject() const
+const QMetaObject *CMessageBox::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *CInputReason::qt_metacast(const char *_clname)
+void *CMessageBox::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_CInputReason.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CMessageBox.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int CInputReason::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CMessageBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     return _id;

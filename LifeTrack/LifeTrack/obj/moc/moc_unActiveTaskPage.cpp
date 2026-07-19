@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'analysisPanel.h'
+** Meta object code from reading C++ file 'unActiveTaskPage.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.14.2)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../panel/analysePanel/analysisPanel.h"
+#include "../../panel/mainPanel/unActiveTaskPage.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'analysisPanel.h' doesn't include <QObject>."
+#error "The header file 'unActiveTaskPage.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.14.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,38 +21,39 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_CAnalysisPanel_t {
-    QByteArrayData data[11];
-    char stringdata0[124];
+struct qt_meta_stringdata_CUnActiveTaskPage_t {
+    QByteArrayData data[12];
+    char stringdata0[141];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_CAnalysisPanel_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CUnActiveTaskPage_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_CAnalysisPanel_t qt_meta_stringdata_CAnalysisPanel = {
+static const qt_meta_stringdata_CUnActiveTaskPage_t qt_meta_stringdata_CUnActiveTaskPage = {
     {
-QT_MOC_LITERAL(0, 0, 14), // "CAnalysisPanel"
-QT_MOC_LITERAL(1, 15, 16), // "sigTaskOperation"
-QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 7), // "task_id"
-QT_MOC_LITERAL(4, 41, 4), // "nRow"
-QT_MOC_LITERAL(5, 46, 14), // "taskActiveType"
-QT_MOC_LITERAL(6, 61, 12), // "taskOperType"
-QT_MOC_LITERAL(7, 74, 18), // "slotsButtonClicked"
-QT_MOC_LITERAL(8, 93, 3), // "row"
-QT_MOC_LITERAL(9, 97, 10), // "operatorId"
-QT_MOC_LITERAL(10, 108, 15) // "slotUpdateTable"
+QT_MOC_LITERAL(0, 0, 17), // "CUnActiveTaskPage"
+QT_MOC_LITERAL(1, 18, 16), // "sigTaskOperation"
+QT_MOC_LITERAL(2, 35, 0), // ""
+QT_MOC_LITERAL(3, 36, 7), // "task_id"
+QT_MOC_LITERAL(4, 44, 4), // "nRow"
+QT_MOC_LITERAL(5, 49, 14), // "taskActiveType"
+QT_MOC_LITERAL(6, 64, 12), // "taskOperType"
+QT_MOC_LITERAL(7, 77, 18), // "slotsButtonClicked"
+QT_MOC_LITERAL(8, 96, 3), // "row"
+QT_MOC_LITERAL(9, 100, 10), // "operatorId"
+QT_MOC_LITERAL(10, 111, 23), // "slotsFilterComBoxChange"
+QT_MOC_LITERAL(11, 135, 5) // "index"
 
     },
-    "CAnalysisPanel\0sigTaskOperation\0\0"
+    "CUnActiveTaskPage\0sigTaskOperation\0\0"
     "task_id\0nRow\0taskActiveType\0taskOperType\0"
     "slotsButtonClicked\0row\0operatorId\0"
-    "slotUpdateTable"
+    "slotsFilterComBoxChange\0index"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_CAnalysisPanel[] = {
+static const uint qt_meta_data_CUnActiveTaskPage[] = {
 
  // content:
        8,       // revision
@@ -69,35 +70,35 @@ static const uint qt_meta_data_CAnalysisPanel[] = {
        1,    4,   29,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    2,   38,    2, 0x0a /* Public */,
-      10,    0,   43,    2, 0x0a /* Public */,
+       7,    2,   38,    2, 0x08 /* Private */,
+      10,    1,   43,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::Int, QMetaType::QString, QMetaType::QString,    3,    4,    5,    6,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::QString,    8,    9,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   11,
 
        0        // eod
 };
 
-void CAnalysisPanel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CUnActiveTaskPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<CAnalysisPanel *>(_o);
+        auto *_t = static_cast<CUnActiveTaskPage *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sigTaskOperation((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const int(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
         case 1: _t->slotsButtonClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 2: _t->slotUpdateTable(); break;
+        case 2: _t->slotsFilterComBoxChange((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (CAnalysisPanel::*)(const QString & , const int , const QString & , const QString & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CAnalysisPanel::sigTaskOperation)) {
+            using _t = void (CUnActiveTaskPage::*)(const QString & , const int , const QString & , const QString & );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CUnActiveTaskPage::sigTaskOperation)) {
                 *result = 0;
                 return;
             }
@@ -105,32 +106,32 @@ void CAnalysisPanel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject CAnalysisPanel::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_CAnalysisPanel.data,
-    qt_meta_data_CAnalysisPanel,
+QT_INIT_METAOBJECT const QMetaObject CUnActiveTaskPage::staticMetaObject = { {
+    QMetaObject::SuperData::link<CCustomWidget::staticMetaObject>(),
+    qt_meta_stringdata_CUnActiveTaskPage.data,
+    qt_meta_data_CUnActiveTaskPage,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *CAnalysisPanel::metaObject() const
+const QMetaObject *CUnActiveTaskPage::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *CAnalysisPanel::qt_metacast(const char *_clname)
+void *CUnActiveTaskPage::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_CAnalysisPanel.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CUnActiveTaskPage.stringdata0))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return CCustomWidget::qt_metacast(_clname);
 }
 
-int CAnalysisPanel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CUnActiveTaskPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = CCustomWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
@@ -146,7 +147,7 @@ int CAnalysisPanel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void CAnalysisPanel::sigTaskOperation(const QString & _t1, const int _t2, const QString & _t3, const QString & _t4)
+void CUnActiveTaskPage::sigTaskOperation(const QString & _t1, const int _t2, const QString & _t3, const QString & _t4)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
